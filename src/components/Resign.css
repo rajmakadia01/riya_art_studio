@@ -1,156 +1,180 @@
-.texture-section {
-    background-color: #1e1e1e;
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .texture-section h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .texture-section h2 span {
-    color: #f15a5a;
-  }
-  
-  .texture-section p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #ccc;
-  }
-  
-  .texture-container {
-    display: flex;
-    gap: 30px;
-    padding: 40px;
-    font-family: 'Arial', sans-serif;
-  }
-  
+.resin-intro-section {
+  background-color: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+}
 
-  
-  .texture-content {
-    flex: 3;
-  }
-  
-  .resign-image {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-  
-  .texture-description {
-    margin-top: 30px;
-  }
-  
-  .texture-description h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #333;
-  }
-  
-  .texture-description p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .reasons-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .reasons-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-  
-  .reasons-list .icon {
-    font-size: 20px;
-    margin-right: 12px;
-    background: #f15a5a;
-    color: #fff;
-    border-radius: 50%;
-    padding: 10px;
-    flex-shrink: 0;
-  }
-  
-  .reasons-list strong {
-    color: #222;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .creations-section {
-    padding: 40px;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-  }
-  
-  .creations-images {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .creation-img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-  }
-  
-  .creations-text h3 {
-    font-size: 20px;
-    margin: 20px 0 10px;
-    font-weight: 700;
-  }
-  
-  .creation-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px;
-  }
-  
-  .creation-list li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .creation-list span {
-    margin-right: 10px;
-    font-size: 18px;
-    color: #f15a5a;
-    flex-shrink: 0;
-  }
-  
-  .creation-list strong {
-    font-weight: bold;
-    margin-right: 5px;
-  }
-  
-  .creations-text p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  
-  .icons{
-    height: 35px;
-    margin-right: 12px;
+.resin-intro-section h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.resin-intro-section h2 span {
+  color: #f15a5a;
+}
+
+.resin-subtitle {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.resin-description {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.resin-main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  flex-wrap: wrap;
+}
+
+.resin-content {
+  flex: 3;
+  min-width: 300px;
+}
+
+.resin-main-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.resin-description-block {
+  margin-top: 30px;
+}
+
+.resin-description-block h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.resin-description-block p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.resin-reason-list {
+  list-style: none;
+  padding: 0;
+}
+
+.resin-reason-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.resin-icon {
+  height: 35px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.resin-reason-list strong {
+  color: #222;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.resin-creations {
+  padding-top: 40px;
+  color: #333;
+}
+
+.resin-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.resin-sample-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.resin-creations-text h3 {
+  font-size: 1.25rem;
+  margin: 20px 0 10px;
+  font-weight: 700;
+}
+
+.resin-creation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.resin-creation-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.resin-check-icon {
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.resin-creations-text p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .resin-main-container {
+    flex-direction: column;
+    padding: 20px;
   }
 
-  .icons_check{
-    height: 20px;
-    margin-right: 12px; 
+  .resin-images {
+    justify-content: center;
   }
-  
+
+  .resin-sample-image {
+    max-width: 100%;
+  }
+
+  .resin-main-image {
+    max-height: 300px;
+  }
+
+  .resin-intro-section h2 {
+    font-size: 1.75rem;
+  }
+
+  .resin-creations-text h3,
+  .resin-description-block h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .resin-icon {
+    height: 25px;
+  }
+
+  .resin-check-icon {
+    height: 16px;
+  }
+}

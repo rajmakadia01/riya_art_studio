@@ -29,6 +29,10 @@ import texture_19 from '../assets/Gallery/TextureArt/texture_19.JPG'
 import texture_21 from '../assets/Gallery/TextureArt/texture_21.JPG'
 import texture_23 from '../assets/Gallery/TextureArt/texture_23.JPG'
 import texture_24 from '../assets/Gallery/TextureArt/texture_24.JPG'
+import texture_25 from '../assets/Gallery/TextureArt/texture_25.jpg'
+import texture_26 from '../assets/Gallery/TextureArt/texture_26.jpg'
+
+
 
 import resin_1 from '../assets/Gallery/resin/resin_1.JPG'
 import resin_2 from '../assets/Gallery/resin/resin_2.JPG'
@@ -48,10 +52,21 @@ import resin_16 from '../assets/Gallery/resin/resin_16.JPG'
 import resin_17 from '../assets/Gallery/resin/resin_17.JPG'
 import resin_18 from '../assets/Gallery/resin/resin_18.PNG'
 import resin_19 from '../assets/Gallery/resin/resin_19.JPG'
-import resin_20 from '../assets/Gallery/resin/resin_20.PNG'
+import resin_20 from '../assets/Gallery/resin/resin_20.JPG'
 import resin_21 from '../assets/Gallery/resin/resin_21.PNG'
 import resin_22 from '../assets/Gallery/resin/resin_22.PNG'
 import resin_23 from '../assets/Gallery/resin/resin_23.JPG'
+import resin_27 from '../assets/Gallery/resin/resin_27.JPG'
+import resin_28 from '../assets/Gallery/resin/resin_28.JPG'
+import resin_29 from '../assets/Gallery/resin/resin_29.JPG'
+import resin_30 from '../assets/Gallery/resin/resin_30.JPG'
+import resin_31 from '../assets/Gallery/resin/resin_31.JPG'
+import resin_32 from '../assets/Gallery/resin/resin32.JPG'
+import resin_33 from '../assets/Gallery/resin/resin33.JPG'
+import resin_34 from '../assets/Gallery/resin/resin34.JPG'
+
+
+
 
 import fabric_1 from '../assets/Gallery/fabric/fabric_1 (2).JPG'
 import fabric_2 from '../assets/Gallery/fabric/fabric_2.JPG'
@@ -192,6 +207,9 @@ const allImages = [
     { src: texture_17, category: 'Texture Art' },
     { src: texture_18, category: 'Texture Art' },
     { src: texture_20, category: 'Texture Art' },
+    { src: texture_25, category: 'Texture Art' },
+    { src: texture_26, category: 'Texture Art' },
+
   
     { src: resin_1, category: 'Resin Art' },
     { src: resin_2, category: 'Resin Art' },
@@ -212,6 +230,17 @@ const allImages = [
     { src: resin_18, category: 'Resin Art' },
     { src: resin_13, category: 'Resin Art' },
     { src: resin_20, category: 'Resin Art' },
+    { src: resin_27, category: 'Resin Art' },
+    { src: resin_28, category: 'Resin Art' },
+    { src: resin_29, category: 'Resin Art' },
+    { src: resin_30, category: 'Resin Art' },
+    { src: resin_31, category: 'Resin Art' },
+    { src: resin_32, category: 'Resin Art' },
+    { src: resin_33, category: 'Resin Art' },
+    { src: resin_34, category: 'Resin Art' },
+
+
+
   
     { src: fabric_1, category: 'Fabric Painting' },
     { src: fabric_2, category: 'Fabric Painting' },

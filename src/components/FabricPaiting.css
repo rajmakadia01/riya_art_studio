@@ -1,157 +1,175 @@
-.texture-section {
-    background-color: #1e1e1e;
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .texture-section h2 {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .texture-section h2 span {
-    color: #f15a5a;
-  }
-  
-  .texture-section p {
-    max-width: 700px;
-    margin: 0 auto;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #ccc;
-  }
-  
-  .texture-container {
-    display: flex;
-    gap: 30px;
-    padding: 40px;
-    font-family: 'Arial', sans-serif;
-  }
-  
+.fabric-intro-section {
+  background-color: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+}
 
-  
-  .texture-content {
-    flex: 3;
+.fabric-intro-section h2 {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.fabric-intro-section h2 span {
+  color: #f15a5a;
+}
+
+.fabric-subtitle {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.fabric-main-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding: 40px;
+  font-family: 'Arial', sans-serif;
+  flex-wrap: wrap;
+}
+
+.fabric-content {
+  flex: 3;
+  min-width: 300px;
+}
+
+.fabric-main-image {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.fabric-description-block {
+  margin-top: 30px;
+}
+
+.fabric-description-block h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.fabric-description-block p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.fabric-reason-list {
+  list-style: none;
+  padding: 0;
+}
+
+.fabric-reason-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.fabric-icon {
+  height: 35px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.fabric-reason-list strong {
+  color: #222;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.fabric-creations {
+  padding-top: 40px;
+  color: #333;
+}
+
+.fabric-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.fabric-sample-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.fabric-creations-text h3 {
+  font-size: 1.25rem;
+  margin: 20px 0 10px;
+  font-weight: 700;
+}
+
+.fabric-creation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.fabric-creation-list li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.fabric-check-icon {
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.fabric-creations-text p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fabric-main-container {
+    flex-direction: column;
+    padding: 20px;
   }
-  
-  .texture-image {
-    width: 100%;
+
+  .fabric-images {
+    justify-content: center;
+  }
+
+  .fabric-main-image {
     max-height: 300px;
-    object-fit: cover;
-    border-radius: 12px;
-  }
-  
-  .texture-description {
-    margin-top: 30px;
-  }
-  
-  .texture-description h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #333;
-  }
-  
-  .texture-description p {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .reasons-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .reasons-list li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-  }
-  
-  .reasons-list .icon {
-    font-size: 20px;
-    margin-right: 12px;
-    background: #f15a5a;
-    color: #fff;
-    border-radius: 50%;
-    padding: 10px;
-    flex-shrink: 0;
-  }
-  
-  .reasons-list strong {
-    color: #222;
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  .creations-section {
-    padding: 40px;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-  }
-  
-  .creations-images {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-  }
-  
-  .creation-img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-  }
-  
-  .creations-text h3 {
-    font-size: 20px;
-    margin: 20px 0 10px;
-    font-weight: 700;
-  }
-  
-  .creation-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 20px;
-  }
-  
-  .creation-list li {
-    margin-bottom: 12px;
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .creation-list span {
-    margin-right: 10px;
-    font-size: 18px;
-    color: #f15a5a;
-    flex-shrink: 0;
-  }
-  
-  .creation-list strong {
-    font-weight: bold;
-    margin-right: 5px;
-  }
-  
-  .creations-text p {
-    font-size: 14px;
-    line-height: 1.6;
   }
 
-  .icons{
-    height: 35px;
-    margin-right: 12px;
+  .fabric-sample-image {
+    max-width: 100%;
   }
 
-  .icons_check{
-    height: 20px;
-    margin-right: 12px; 
+  .fabric-intro-section h2 {
+    font-size: 1.75rem;
   }
-  
-  
+
+  .fabric-creations-text h3,
+  .fabric-description-block h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fabric-icon {
+    height: 25px;
+  }
+
+  .fabric-check-icon {
+    height: 16px;
+  }
+}
