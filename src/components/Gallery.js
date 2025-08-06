@@ -176,15 +176,15 @@ import charcoal_20 from '../assets/Gallery/charcoal/charcoal_20.JPG'
 import charcoal_21 from '../assets/Gallery/charcoal/charcoal_21.JPG'
 
 
-const latestImages = [texture_13, resin_3, fabric_27];
+const latestImages = [texture_2, canvas_23, charcoal_2,resin_27,Acrylic_2,fabric_27];
 
 const categoryOptions = [
   { value: 'Texture Art', label: 'Texture Art' },
-  { value: 'Acrylic Pouring', label: 'Acrylic Pouring' },
   { value: 'Canvas Painting', label: 'Canvas Painting' },
+  { value: 'Charcoal Painting', label: 'Charcoal Paintings' },
   { value: 'Resin Art', label: 'Resin Art' },
+  { value: 'Acrylic Pouring', label: 'Acrylic Pouring' },
   { value: 'Fabric Painting', label: 'Fabric Paintings' },
-  { value: 'Charcoal Painting', label: 'Charcoal Paintings' }
 ];
 
 const allImages = [
@@ -319,7 +319,7 @@ const allImages = [
     { src: Acrylic_18, category: 'Acrylic Pouring' },
   
     { src: charcoal_1, category: 'Charcoal Painting' },
-    { src: charcoal_12, category: 'Charcoal Painting' },
+    { src: charcoal_21, category: 'Charcoal Painting' },
     { src: charcoal_3, category: 'Charcoal Painting' },
     { src: charcoal_4, category: 'Charcoal Painting' },
     { src: charcoal_2, category: 'Charcoal Painting' },
@@ -331,14 +331,13 @@ const allImages = [
     { src: charcoal_8, category: 'Charcoal Painting' },
     { src: charcoal_12, category: 'Charcoal Painting' },
     { src: charcoal_13, category: 'Charcoal Painting' },
-    { src: charcoal_2, category: 'Charcoal Painting' },
+    { src: charcoal_20, category: 'Charcoal Painting' },
     { src: charcoal_17, category: 'Charcoal Painting' },
     { src: charcoal_15, category: 'Charcoal Painting' },
     { src: charcoal_19, category: 'Charcoal Painting' },
     { src: charcoal_18, category: 'Charcoal Painting' },
     { src: charcoal_16, category: 'Charcoal Painting' },
-    { src: charcoal_20, category: 'Charcoal Painting' },
-    { src: charcoal_21, category: 'Charcoal Painting' },
+  
 ];
 
 const Gallery = () => {
