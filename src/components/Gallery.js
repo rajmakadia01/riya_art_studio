@@ -181,10 +181,10 @@ const latestImages = [texture_2, canvas_23, charcoal_2,resin_27,Acrylic_2,fabric
 const categoryOptions = [
   { value: 'Texture Art', label: 'Texture Art' },
   { value: 'Canvas Painting', label: 'Canvas Painting' },
-  { value: 'Charcoal Painting', label: 'Charcoal Paintings' },
+  { value: 'Charcoal Painting', label: 'Charcoal Sketch' },
   { value: 'Resin Art', label: 'Resin Art' },
-  { value: 'Acrylic Pouring', label: 'Acrylic Pouring' },
-  { value: 'Fabric Painting', label: 'Fabric Paintings' },
+  { value: 'Acrylic Pouring', label: 'Acrylic Pouring Art' },
+  { value: 'Fabric Painting', label: 'Fabric Painting' },
 ];
 
 const allImages = [

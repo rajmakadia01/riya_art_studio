@@ -22,8 +22,8 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/textureArt" element={<TextureArtSection />} />
               <Route path="/charcoalSketch" element={<CharcoalSketch />} />
-              <Route path="/resignArt" element={<ResignArt />} />
-              <Route path="/acrylicPouring" element={<AcrylicPouling />} />
+              <Route path="/resinArt" element={<ResignArt />} />
+              <Route path="/acrylicPouringArt" element={<AcrylicPouling />} />
               <Route path="/fabricPainting" element={<FabricPaiting />} />
               <Route path="/canvasPainting" element={<CanvasPaiting />} />
               <Route path="/gallery" element={<Gallery />} />

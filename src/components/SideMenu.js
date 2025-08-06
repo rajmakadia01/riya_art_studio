@@ -11,11 +11,11 @@ import charcoal from '../assets/icon/charcoal-paiting.png';
 
 const menuItems = [
   { to: '/textureArt', label: 'Texture Art', icon: textureicon },
-  { to: '/charcoalSketch', label: 'Charcoal Sketch', icon: charcoal },
-  { to: '/resignArt', label: 'Resin Art', icon: resignArt },
-  { to: '/acrylicPouring', label: 'Acrylic Pouring Art', icon: arylicPouring },
-  { to: '/fabricPainting', label: 'Fabric Painting', icon: FabricPaitings },
   { to: '/canvasPainting', label: 'Canvas Painting', icon: canvasPaint },
+  { to: '/charcoalSketch', label: 'Charcoal Sketch', icon: charcoal },
+  { to: '/resinArt', label: 'Resin Art', icon: resignArt },
+  { to: '/acrylicPouringArt', label: 'Acrylic Pouring Art', icon: arylicPouring },
+  { to: '/fabricPainting', label: 'Fabric Painting', icon: FabricPaitings },
 ];
 
 const SideMenu = () => {

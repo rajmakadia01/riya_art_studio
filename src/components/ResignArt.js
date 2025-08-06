@@ -11,7 +11,7 @@ const ResignArt = () => {
     <>
       <section className="resin-intro-section">
         <h2>
-          Resign <span>Art</span>
+          Resin <span>Art</span>
         </h2>
         <p className="resin-subtitle">Turning Imagination into Glossy Reality</p>
         <p className="resin-description">

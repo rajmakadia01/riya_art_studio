@@ -325,6 +325,61 @@ button:hover {
   background-color: #d04444;
 }
 
+/* Toast Notification (top-right popup) */
+.toast-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.toast-content {
+  background-color: #ffffff;
+  border-left: 6px solid #e55757;
+  border-radius: 10px;
+  padding: 15px 20px;
+  min-width: 250px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.toast-content strong {
+  color: #e55757;
+  font-size: 16px;
+}
+
+.toast-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.toast-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toast-close:hover {
+  color: #e55757;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
   .contact-sections {
     flex-direction: column;

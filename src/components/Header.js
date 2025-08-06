@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -12,16 +13,23 @@ const Header = () => {
             </div>
 
             <nav className="desktop-nav nav-links">
-                <a href="/" className="active">Home</a>
-                <a href="/about">About</a>
-                <a href="/textureArt">Art Category</a>
-                <a href="#">Gallery</a>
-                <a href="#">Contact</a>
+                <NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''}>
+                    <i className="fas fa-home"></i> Home
+                </NavLink>
+                <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
+                    <i className="fas fa-user"></i> About
+                </NavLink>
+                <NavLink to="/textureArt" className={({ isActive }) => isActive ? 'active' : ''}>
+                    <i className="fas fa-paint-brush"></i> Art Category
+                </NavLink>
+                <NavLink to="/gallery" className={({ isActive }) => isActive ? 'active' : ''}>
+                    <i className="fas fa-images"></i> Gallery
+                </NavLink>
             </nav>
 
             <div className="contact-section">
                 <button className="contact-button">
-                    <i className="fas fa-phone"></i> 9662447547
+                    <i className="fas fa-phone"></i>+91 9662447547
                 </button>
             </div>
 
@@ -35,14 +43,22 @@ const Header = () => {
                 <div className="mobile-menu-overlay">
                     <button className="close-button" onClick={() => setMenuOpen(false)}>&times;</button>
                     <nav className="mobile-nav">
-                        <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
-                        <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
-                        <a href="/textureArt" onClick={() => setMenuOpen(false)}>Art Category</a>
-                        <a href="#" onClick={() => setMenuOpen(false)}>Gallery</a>
+                        <NavLink to="/" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>
+                            <i className="fas fa-home"></i> Home
+                        </NavLink>
+                        <NavLink to="/about" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>
+                            <i className="fas fa-user"></i> About
+                        </NavLink>
+                        <NavLink to="/textureArt" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>
+                            <i className="fas fa-paint-brush"></i> Art Category
+                        </NavLink>
+                        <NavLink to="/gallery" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>
+                            <i className="fas fa-images"></i> Gallery
+                        </NavLink>
 
                         <div className="mobile-buttons">
                             <button className="contact-button">
-                                <i className="fas fa-phone"></i> 9662447547
+                                <i className="fas fa-phone"></i> +91 9662447547
                             </button>
                         </div>
                     </nav>

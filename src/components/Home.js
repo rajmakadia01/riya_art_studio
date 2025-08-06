@@ -10,7 +10,7 @@ import image11 from '../assets/Home/image7.JPG'
 import image10 from '../assets/Home/image_6.JPG'
 import image12 from '../assets/Home/image12.JPG'
 import textureicon from '../assets/icon/texture_icon.png'
-import FabricPaitings from '../assets/icon/fabric_paiting.png';
+import FabricPaintings from '../assets/icon/fabric_paiting.png';
 import canvasPaint from '../assets/icon/canvas.png'
 import arylicPouring from '../assets/icon/acrylic-paint.png'
 import resignArt from '../assets/icon/resin.png'
@@ -112,18 +112,29 @@ const Home = () => {
                     Immerse yourself in a world where every piece tells a unique story. Let your imagination soar as you discover new styles and techniques.
                 </p>
                 <div className="art-cards-container">
-                    {/* Texture Art Card */}
-                    <div className="art-card texture-art">
-                        <div className="icon-circle">
-                            <img src={textureicon} />
-                        </div>
-                        <h2>Texture Art</h2>
-                        <p>
-                        Texture Art is a unique form of artistic expression that adds depth and dimension to paintings and sculptures.By incorporating various materials...
-                        </p>
-                        <button className="view-more-btns">View More</button>
-                    </div>
+                <div className="art-card texture-art">
+  <div className="icon-circle">
+    <img src={textureicon} alt="Texture Icon" />
+  </div>
+  <h2>Texture Art</h2>
+  <p>
+    Texture Art is a unique form of artistic expression that adds depth and dimension to paintings and sculptures. By incorporating various materials...
+  </p>
+  <a href="/textureArt" className="view-more-btns">View More</a>
+</div>
 
+
+                    <div className="art-card">
+                        <div className="icon-circle">
+                           <img src={canvasPaint} />
+                            
+                        </div>
+                        <h2>Canvas Painting</h2>
+                        <p>
+                        Canvas Painting is a timeless art form that allows creativity to flow onto a durable fabric surface. Using high-quality paints, brushes, and techniques...
+                        </p>
+                        <a href="/canvasPainting" className="view-more-btns">View More</a>
+                    </div>
                     {/* Charcoal Sketch Card */}
                     <div className="art-card">
                         <div className="icon-circle">
@@ -132,7 +143,8 @@ const Home = () => {
                         <h2>Charcoal Sketch</h2>
                         <p>
                         Charcoal Sketch Art is a captivating form of drawing that uses charcoal to create deep contrasts, rich textures, and expressive details.</p>
-                        <button className="view-more-btns">View More</button>
+                        <a href="/charcoalSketch" className="view-more-btns">View More</a>
+
                     </div>
 
                     {/* Resin Art Card */}
@@ -144,7 +156,8 @@ const Home = () => {
                         <p>
                         Resign Art is an innovative approach to art that transforms discarded materials into stunning, meaningful creations. By repurposing waste into unique...
                         </p>
-                        <button className="view-more-btns">View More</button>
+                        <a href="/resinArt" className="view-more-btns">View More</a>
+
                     </div>
                     <div className="art-card">
                         <div className="icon-circle">
@@ -154,31 +167,23 @@ const Home = () => {
                         <p>
                         Acrylic Pouring Art is a dynamic and fluid painting technique that creates mesmerizing patterns, vibrant color blends, and unique abstract designs.
                         </p>
-                        <button className="view-more-btns">View More</button>
+                        <a href="/acrylicPouringArt" className="view-more-btns">View More</a>
+
                     </div>
 
                     {/* Resin Art Card */}
                     <div className="art-card">
                         <div className="icon-circle">
-                           <img src={FabricPaitings} />
+                           <img src={FabricPaintings} />
                         </div>
-                        <h2>Fabric Paiting</h2>
+                        <h2>Fabric Painting</h2>
                         <p>
                         Fabric Painting is a creative art form that brings textiles to life with beautiful hand-painted designs. Using high-quality fabric paints...
                         </p>
-                        <button className="view-more-btns">View More</button>
+                        <a href="/fabricPainting" className="view-more-btns">View More</a>
+
                     </div>
-                    <div className="art-card">
-                        <div className="icon-circle">
-                           <img src={canvasPaint} />
-                            
-                        </div>
-                        <h2>Canvas Paiting</h2>
-                        <p>
-                        Canvas Painting is a timeless art form that allows creativity to flow onto a durable fabric surface. Using high-quality paints, brushes, and techniques...
-                        </p>
-                        <button className="view-more-btns">View More</button>
-                    </div>
+                    
                 </div>
             </div>
             <HappyClient />
@@ -225,7 +230,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <button className="view-all-btn">View ALL</button>
+      <button className="view-all-btn"><a href="/gallery">View ALL</a></button>
     </div>
         </>
     );
