@@ -19,7 +19,7 @@ import HappyClient from './Happyclient';
 import BackArrow from '../assets/icon/back.png'
 import FontArrow from '../assets/icon/right.png'
 // import texture_24 from '../assets/Gallery/TextureArt/texture_24.JPG'
-
+import { Link } from 'react-router-dom';
 
 const reviews = [
     {
@@ -120,7 +120,7 @@ const Home = () => {
   <p>
     Texture Art is a unique form of artistic expression that adds depth and dimension to paintings and sculptures. By incorporating various materials...
   </p>
-  <a href="/art-category/textureArt" className="view-more-btns">View More</a>
+  <Link to="/art-category/textureArt" className="view-more-btns">View More</Link>
 
 </div>
 
@@ -134,7 +134,8 @@ const Home = () => {
                         <p>
                         Canvas Painting is a timeless art form that allows creativity to flow onto a durable fabric surface. Using high-quality paints, brushes, and techniques...
                         </p>
-                        <a href="/art-category/canvasPainting" className="view-more-btns">View More</a>
+  <Link to="/art-category/canvasPainting" className="view-more-btns">View More</Link>
+
                     </div>
                     {/* Charcoal Sketch Card */}
                     <div className="art-card">
@@ -144,7 +145,7 @@ const Home = () => {
                         <h2>Charcoal Sketch</h2>
                         <p>
                         Charcoal Sketch Art is a captivating form of drawing that uses charcoal to create deep contrasts, rich textures, and expressive details.</p>
-                        <a href="/art-category/charcoalSketch" className="view-more-btns">View More</a>
+                        <Link to="/art-category/charcoalSketch" className="view-more-btns">View More</Link>
 
                     </div>
 
@@ -157,7 +158,7 @@ const Home = () => {
                         <p>
                         Resign Art is an innovative approach to art that transforms discarded materials into stunning, meaningful creations. By repurposing waste into unique...
                         </p>
-                        <a href="/art-category/resinArt" className="view-more-btns">View More</a>
+                        <Link to="/art-category/resinArt" className="view-more-btns">View More</Link>
 
                     </div>
                     <div className="art-card">
@@ -168,7 +169,7 @@ const Home = () => {
                         <p>
                         Acrylic Pouring Art is a dynamic and fluid painting technique that creates mesmerizing patterns, vibrant color blends, and unique abstract designs.
                         </p>
-                        <a href="/art-category/acrylicPouringArt" className="view-more-btns">View More</a>
+                        <Link to="/art-category/acrylicPouringArt" className="view-more-btns">View More</Link>
 
                     </div>
 
@@ -181,7 +182,8 @@ const Home = () => {
                         <p>
                         Fabric Painting is a creative art form that brings textiles to life with beautiful hand-painted designs. Using high-quality fabric paints...
                         </p>
-                        <a href="/art-category/fabricPainting" className="view-more-btns">View More</a>
+                        <Link to="/art-category/fabricPainting" className="view-more-btns">View More</Link>
+
 
                     </div>
                     
