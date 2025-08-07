@@ -121,6 +121,7 @@ const Home = () => {
     Texture Art is a unique form of artistic expression that adds depth and dimension to paintings and sculptures. By incorporating various materials...
   </p>
   <a href="/art-category/textureArt" className="view-more-btns">View More</a>
+
 </div>
 
 

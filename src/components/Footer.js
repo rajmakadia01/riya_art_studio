@@ -158,12 +158,12 @@ const Footer = () => {
           <div className="footer-section art-categories">
             <h3>Art Category</h3>
             <ul>
-              <li><a href="/art-category/textureArt">Texture Art</a></li>
-              <li><a href="/art-category/canvasPainting">Canvas Painting</a></li>
-              <li><a href="/art-category/charcoalSketch">Charcoal Sketch</a></li>
-              <li><a href='/art-category/resinArt'> Resin Art</a></li>
-              <li><a href='/art-category/acrylicPouringArt'>Acrylic Pouring Art</a></li>
-              <li><a href="/art-category/fabricPainting">Fabric Painting</a></li>
+              <li><a href="/art-category/textureArt" style={{color:'white'}}>Texture Art</a></li>
+              <li><a href="/art-category/canvasPainting" style={{color:'white'}}>Canvas Painting</a></li>
+              <li><a href="/art-category/charcoalSketch" style={{color:'white'}}>Charcoal Sketch</a></li>
+              <li><a href='/art-category/resinArt' style={{color:'white'}}> Resin Art</a></li>
+              <li><a href='/art-category/acrylicPouringArt' style={{color:'white'}}>Acrylic Pouring Art</a></li>
+              <li><a href="/art-category/fabricPainting" style={{color:'white'}}>Fabric Painting</a></li>
             </ul>
           </div>
 
