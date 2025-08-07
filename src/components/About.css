@@ -81,6 +81,7 @@
   .profile-button:hover {
     background-color: #e63946;
   }
+  
 
   @media (max-width: 768px) {
     .profile-section {
@@ -100,7 +101,7 @@
   }
   .mission-vision-section {
     margin:auto;
-    padding: 80px;
+    padding: 30px;
     background-color: #f8f9fa;
     font-family: Arial, sans-serif;
     position: relative;
@@ -153,6 +154,8 @@
     margin-bottom: 15px;
     position: relative;
   }
+
+
 
 
   .text-block h3 {

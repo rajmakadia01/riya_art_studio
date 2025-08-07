@@ -19,7 +19,7 @@ const Header = () => {
                 <NavLink to="/about" className={({ isActive }) => isActive ? 'active' : ''}>
                     <i className="fas fa-user"></i> About
                 </NavLink>
-                <NavLink to="/textureArt" className={({ isActive }) => isActive ? 'active' : ''}>
+                <NavLink to="/art-category/textureArt" className={({ isActive }) => isActive ? 'active' : ''}>
                     <i className="fas fa-paint-brush"></i> Art Category
                 </NavLink>
                 <NavLink to="/gallery" className={({ isActive }) => isActive ? 'active' : ''}>
@@ -49,7 +49,7 @@ const Header = () => {
                         <NavLink to="/about" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>
                             <i className="fas fa-user"></i> About
                         </NavLink>
-                        <NavLink to="/textureArt" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>
+                        <NavLink to="/art-category/textureArt" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>
                             <i className="fas fa-paint-brush"></i> Art Category
                         </NavLink>
                         <NavLink to="/gallery" onClick={() => setMenuOpen(false)} className={({ isActive }) => isActive ? 'active' : ''}>

@@ -2,7 +2,7 @@ import './About.css'
 import HappyClient from './Happyclient';
 import mission from '../../src/assets/icon/mission (1).png'
 import vission from '../../src/assets/icon/binoculars.png'
-import textureicon from '../assets/icon/texture_icon.png'
+import textureicon from '../assets/icon/tile.png'
 import FabricPaitings from '../assets/icon/fabric_paiting.png';
 import charcoal from '../assets/icon/charcoal-paiting.png'
 import canvasPaint from '../assets/icon/canvas.png'
@@ -21,11 +21,11 @@ const About = () => {
         <div className="profile-image"></div>
         <div className="profile-content">
           <h1 className="profile-name">
-            Riya <span>Makadiya</span>
+            Riya <span>Kansagra</span>
           </h1>
           <h2 className="profile-title">Owner of Riya Artist Studio</h2>
           <p className="profile-description">
-            Hi, I’m Riya Makadiya, the founder of Riya Artist Studio. With over 7 years of experience in the world of art, I’ve dedicated my life to expressing creativity through a variety of mediums. My artistic journey has allowed me to grow as a creator, blending emotion, imagination, and precision into every piece I make.
+            Hi, I’m Riya Kansagra, the founder of Riya Artist Studio. With over 7 years of experience in the world of art, I’ve dedicated my life to expressing creativity through a variety of mediums. My artistic journey has allowed me to grow as a creator, blending emotion, imagination, and precision into every piece I make.
           </p>
           <p className="profile-description">
             Over the years, I’ve had the honor of working with more than 60 happy clients and completing 500+ unique artworks. I specialize in a wide range of styles including texture art, resin art, charcoal sketches, acrylic pouring, canvas painting, and fabric painting. Each project is a new opportunity to tell a story and connect deeply with the people who experience my art.
@@ -36,7 +36,7 @@ const About = () => {
       <HappyClient />
       <div className="mission-vision-section">
         <h2 className="section-heading">
-          Lorem <span>Ipsum</span> is simply
+        Inspired by Life <span>Expressed in Color</span>
         </h2>
         <div className="content-row">
           <div className="text-block mission">
@@ -77,10 +77,11 @@ const About = () => {
         </h2>
         <div className="why-riya-cards">
           <div className="why-card highlighted">
-            <img src={textureicon} alt="Texture Icon" className="icon" />
-
+            <img src={textureicon} alt="Texture Icon" className="icon" style={{ marginTop: "-8px"  }}/>
+            <div style={{marginTop:"22px"}}>
             <h3>Personalized Artworks</h3>
             <p>We create unique, custom-made pieces that reflect your vision and emotions — perfect for gifting or decorating your space.</p>
+          </div>
           </div>
           <div className="why-card">
             <div className="icon">

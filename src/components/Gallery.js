@@ -404,9 +404,13 @@ const Gallery = () => {
       {/* About Section */}
       <div className="texture-section">
         <h2>
-          Resign <span>Art</span>
+           <span>Gallery</span>
         </h2>
-        <p>Resign Art – Redefining Creativity with Sustainability</p>
+        <p>"A curated fusion of art and atmosphere — bold forms, bolder stories."
+Where creativity meets soul, and every piece speaks without words.
+Transforming spaces into experiences through the language of art.
+
+</p>
       </div>
 
       {/* Latest Work */}
