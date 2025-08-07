@@ -25,7 +25,7 @@ function App() {
               <Route path="/art-category/acrylicPouringArt" element={<AcrylicPouling />} />
               <Route path="/art-category/fabricPainting" element={<FabricPaiting />} />
               <Route path="/art-category/canvasPainting" element={<CanvasPaiting />} />
-              <Route path="/art-category/gallery" element={<Gallery />} />
+              <Route path="/gallery" element={<Gallery />} />
           </Routes>
           <Footer />
       </Router>

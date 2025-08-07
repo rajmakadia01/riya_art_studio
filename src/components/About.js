@@ -6,6 +6,8 @@ import textureicon from '../assets/icon/tile.png'
 import FabricPaitings from '../assets/icon/fabric_paiting.png';
 import charcoal from '../assets/icon/charcoal-paiting.png'
 import canvasPaint from '../assets/icon/canvas.png'
+import image1 from '../assets/About/about_1.JPG'
+import image2 from '../assets/About/about_2.JPG'
 
 const About = () => {
   return (
@@ -47,14 +49,21 @@ const About = () => {
             <p>
               My goal is to create meaningful, visually captivating art that enhances any space—be it a home, an office, or a personal collection. Whether you’re seeking a customized gift, a statement piece, or something truly one-of-a-kind, I’m committed to bringing your vision to life with passion and creativity.
             </p>
+            <p>
+            Each piece I create is more than just a work of art — it's a story, an emotion, and a reflection of individuality. I believe art should not only be seen but felt, experienced, and remembered.
+            </p>
+            <p>
+              At Riya Artist Studio, I strive to blend imagination with technique, crafting pieces that are both expressive and enduring. I prioritize quality, detail, and originality in everything I do, ensuring each creation is as unique as the person receiving it.
+            </p>
           </div>
           <div className="image-placeholder top">
-            {/* Placeholder for top image */}
+            <img src={image1} />
           </div>
         </div>
         <div className="content-row">
           <div className="image-placeholder bottom">
-            {/* Placeholder for bottom image */}
+            <img src={image2} />
+
           </div>
           <div className="text-block vision">
             <div className="icon">
@@ -63,6 +72,10 @@ const About = () => {
             <h3>OUR VISION</h3>
             <p>
               At Riya Artist Studio, our vision is to redefine creativity through artistic expression that speaks to the soul. We believe that art has the power to transform spaces, evoke emotions, and inspire change. Our goal is to create visually stunning and meaningful artwork that not only adds beauty but also brings depth and connection to everyday life.
+            </p>
+            <p>
+            We envision a world where art is not a luxury, but a vital part of living — where it enriches minds, stirs hearts, and tells untold stories. Our creations aim to bridge the gap between imagination and reality, offering pieces that resonate on a personal and universal level.
+            Through our work, we seek to empower individuals to see the world through a more thoughtful and inspired lens. We are passionate about nurturing creativity in all its forms, and making art more accessible to diverse audiences.
             </p>
           </div>
         </div>

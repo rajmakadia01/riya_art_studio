@@ -152,19 +152,18 @@ const Footer = () => {
               <li><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
               <li><a href="/gallery">Gallery</a></li>
-              <li><a href="/contact">Contact</a></li>
             </ul>
           </div>
 
           <div className="footer-section art-categories">
             <h3>Art Category</h3>
             <ul>
-              <li>Texture Art</li>
-              <li>Charcoal Sketch</li>
-              <li>Resin Art</li>
-              <li>Acrylic Pouring Art</li>
-              <li>Fabric Painting</li>
-              <li>Canvas Painting</li>
+              <li><a href="/art-category/textureArt">Texture Art</a></li>
+              <li><a href="/art-category/canvasPainting">Canvas Painting</a></li>
+              <li><a href="/art-category/charcoalSketch">Charcoal Sketch</a></li>
+              <li><a href='/art-category/resinArt'> Resin Art</a></li>
+              <li><a href='/art-category/acrylicPouringArt'>Acrylic Pouring Art</a></li>
+              <li><a href="/art-category/fabricPainting">Fabric Painting</a></li>
             </ul>
           </div>
 
