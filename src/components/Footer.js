@@ -2,6 +2,7 @@ import './Footer.css';
 import emailjs from 'emailjs-com';
 import React, { useRef, useState } from 'react';
 import Select from 'react-select';
+import { Link } from 'react-router-dom';
 
 const categoryOptions = [
   { value: 'Texture Art', label: 'Texture Art' },
@@ -149,21 +150,21 @@ const Footer = () => {
           <div className="footer-section quick-links">
             <h3>Quick Link</h3>
             <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/gallery">Gallery</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
             </ul>
           </div>
 
           <div className="footer-section art-categories">
             <h3>Art Category</h3>
             <ul>
-              <li><a href="/art-category/textureArt" style={{color:'white'}}>Texture Art</a></li>
-              <li><a href="/art-category/canvasPainting" style={{color:'white'}}>Canvas Painting</a></li>
-              <li><a href="/art-category/charcoalSketch" style={{color:'white'}}>Charcoal Sketch</a></li>
-              <li><a href='/art-category/resinArt' style={{color:'white'}}> Resin Art</a></li>
-              <li><a href='/art-category/acrylicPouringArt' style={{color:'white'}}>Acrylic Pouring Art</a></li>
-              <li><a href="/art-category/fabricPainting" style={{color:'white'}}>Fabric Painting</a></li>
+              <li><Link to="/art-category/textureArt" style={{color:'white'}}>Texture Art</Link></li>
+              <li><Link to="/art-category/canvasPainting" style={{color:'white'}}>Canvas Painting</Link></li>
+              <li><Link to="/art-category/charcoalSketch" style={{color:'white'}}>Charcoal Sketch</Link></li>
+              <li><Link to='/art-category/resinArt' style={{color:'white'}}> Resin Art</Link></li>
+              <li><Link to='/art-category/acrylicPouringArt' style={{color:'white'}}>Acrylic Pouring Art</Link></li>
+              <li><Link to="/art-category/fabricPainting" style={{color:'white'}}>Fabric Painting</Link></li>
             </ul>
           </div>
 
@@ -175,7 +176,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>Copyright © 2025 All rights reserved to <a href="#">Riya Artist Studio</a></p>
+          <p>Copyright © 2025 All rights reserved to <Link to="/">Riya Artist Studio</Link></p>
         </div>
       </div>
 

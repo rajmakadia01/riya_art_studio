@@ -54,7 +54,7 @@ const AcrylicPouling = () => {
             <h3>Why Choose Acrylic Pouring Art?</h3>
             <ul className="acrylic-reason-list">
               <li>
-                <img src={star} className="acrylic-icon" />
+                <img src={star} className="acrylic-icon" alt="acrlic" />
                 <div>
                   <strong>Vibrant & Eye-Catching</strong>
                   <p>
@@ -64,7 +64,7 @@ const AcrylicPouling = () => {
                 </div>
               </li>
               <li>
-                <img src={star} className="acrylic-icon" />
+                <img src={star} className="acrylic-icon" alt="acrlic1" />
                 <div>
                   <strong>Unique & Unrepeatable</strong>
                   <p>
@@ -74,7 +74,7 @@ const AcrylicPouling = () => {
                 </div>
               </li>
               <li>
-                <img src={star} className="acrylic-icon" />
+                <img src={star} className="acrylic-icon" alt="acrlic2" />
                 <div>
                   <strong>Modern & Expressive</strong>
                   <p>
@@ -84,7 +84,7 @@ const AcrylicPouling = () => {
                 </div>
               </li>
               <li>
-                <img src={star} className="acrylic-icon" />
+                <img src={star} className="acrylic-icon" alt="acrlic3" />
                 <div>
                   <strong>Perfect for Decor</strong>
                   <p>
@@ -106,28 +106,28 @@ const AcrylicPouling = () => {
               <h3>Our Acrylic Pouring Art Creations</h3>
               <ul className="acrylic-creation-list">
   <li>
-    <img src={check} className="acrylic-check-icon" />
+    <img src={check} className="acrylic-check-icon" alt="acrli4"  />
     <div className="acrylic-creation-text">
       <span className="acrylic-creation-title">Acrylic Texture Paintings</span>
       <span className="acrylic-creation-description">Stunning fluid art with rich colors and depth.</span>
     </div>
   </li>
   <li>
-    <img src={check} className="acrylic-check-icon" />
+    <img src={check} className="acrylic-check-icon" alt="acrlic5" />
     <div className="acrylic-creation-text">
       <span className="acrylic-creation-title">Resin & Acrylic Combinations</span>
       <span className="acrylic-creation-description">Glossy, high-finish pieces for a modern aesthetic.</span>
     </div>
   </li>
   <li>
-    <img src={check} className="acrylic-check-icon" />
+    <img src={check} className="acrylic-check-icon" alt="acrlic6" />
     <div className="acrylic-creation-text">
       <span className="acrylic-creation-title">Custom Color Palettes</span>
       <span className="acrylic-creation-description">Personalized artwork to match your interior style.</span>
     </div>
   </li>
   <li>
-    <img src={check} className="acrylic-check-icon" />
+    <img src={check} className="acrylic-check-icon" alt="acrlic7" />
     <div className="acrylic-creation-text">
       <span className="acrylic-creation-title">Functional Art Pieces</span>
       <span className="acrylic-creation-description">Coasters, trays, and more with acrylic pouring designs.</span>

@@ -5,7 +5,7 @@ import image2 from '../assets/Home/image2.jpeg'
 import image3 from '../assets/Home/image3.JPG'
 import image4 from '../assets/Home/home1.JPG'
 import image8 from '../assets/Home/image8.JPG' 
-import image9 from '../assets/Home/image9.JPG'
+// import image9 from '../assets/Home/image9.JPG'
 import image11 from '../assets/Home/image7.JPG'
 import image10 from '../assets/Home/image_6.JPG'
 import image12 from '../assets/Home/image12.JPG'
@@ -127,7 +127,7 @@ const Home = () => {
 
                     <div className="art-card">
                         <div className="icon-circle">
-                           <img src={canvasPaint} />
+                           <img src={canvasPaint} alt="canvas"/>
                             
                         </div>
                         <h2>Canvas Painting</h2>
@@ -140,7 +140,7 @@ const Home = () => {
                     {/* Charcoal Sketch Card */}
                     <div className="art-card">
                         <div className="icon-circle">
-                            <img src={charcoal} />
+                            <img src={charcoal} alt="charcoal"/>
                         </div>
                         <h2>Charcoal Sketch</h2>
                         <p>
@@ -152,7 +152,7 @@ const Home = () => {
                     {/* Resin Art Card */}
                     <div className="art-card">
                         <div className="icon-circle">
-                            <img src={resignArt} />
+                            <img src={resignArt} alt="resin"/>
                         </div>
                         <h2>Resin Art</h2>
                         <p>
@@ -163,7 +163,7 @@ const Home = () => {
                     </div>
                     <div className="art-card">
                         <div className="icon-circle">
-                            <img src={arylicPouring} />
+                            <img src={arylicPouring} alt="acrylic" />
                         </div>
                         <h2>Acrylic Pouring Art</h2>
                         <p>
@@ -176,7 +176,7 @@ const Home = () => {
                     {/* Resin Art Card */}
                     <div className="art-card">
                         <div className="icon-circle">
-                           <img src={FabricPaintings} />
+                           <img src={FabricPaintings} alt="fabric"/>
                         </div>
                         <h2>Fabric Painting</h2>
                         <p>
@@ -197,7 +197,7 @@ const Home = () => {
 
                 <div className="review-box">
                     <button className="arrow-button left" onClick={prevReview}>
-                        <img src={BackArrow} className="backArrow"/>
+                        <img src={BackArrow} className="backArrow" alt="back"/>
                     </button>
 
                     <div className="review-content">
@@ -220,7 +220,7 @@ const Home = () => {
                     </div>
 
                     <button className="arrow-button right" onClick={nextReview}>
-                        <img src={FontArrow} className="backArrow"/>
+                        <img src={FontArrow} className="backArrow" alt="font"/>
                     </button>
                 </div>
             </div>
@@ -233,7 +233,10 @@ const Home = () => {
           </div>
         ))}
       </div>
-      <button className="view-all-btn"><a href="/gallery">View ALL</a></button>
+      <button className="view-all-btn">
+          <Link to="/gallery">View All</Link>
+
+          </button>
     </div>
         </>
     );

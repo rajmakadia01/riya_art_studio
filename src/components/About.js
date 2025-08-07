@@ -57,12 +57,12 @@ const About = () => {
             </p>
           </div>
           <div className="image-placeholder top">
-            <img src={image1} />
+            <img src={image1} alt="image1" />
           </div>
         </div>
         <div className="content-row">
           <div className="image-placeholder bottom">
-            <img src={image2} />
+            <img src={image2} alt="image2"/>
 
           </div>
           <div className="text-block vision">
