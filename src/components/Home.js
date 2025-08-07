@@ -18,7 +18,7 @@ import charcoal from '../assets/icon/charcoal-paiting.png'
 import HappyClient from './Happyclient';
 import BackArrow from '../assets/icon/back.png'
 import FontArrow from '../assets/icon/right.png'
-import texture_24 from '../assets/Gallery/TextureArt/texture_24.JPG'
+// import texture_24 from '../assets/Gallery/TextureArt/texture_24.JPG'
 
 
 const reviews = [
