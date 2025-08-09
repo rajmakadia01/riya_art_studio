@@ -3,7 +3,6 @@ import emailjs from 'emailjs-com';
 import React, { useRef, useState } from 'react';
 import Select from 'react-select';
 import { Link } from 'react-router-dom';
-
 const categoryOptions = [
   { value: 'Texture Art', label: 'Texture Art' },
   { value: 'Canvas Painting', label: 'Canvas Painting' },
@@ -113,7 +112,9 @@ const Footer = () => {
           <form ref={formRef} onSubmit={handleSubmit}>
             <div className="form-row">
               <input type="text" name="user_name" placeholder="Full Name" required />
-              <div style={{ width: '250px' }}>
+             
+            </div>
+            <div>
                 <Select
                   options={categoryOptions}
                   onChange={setSelectedCategory}
@@ -122,7 +123,6 @@ const Footer = () => {
                   isSearchable={false}
                 />
               </div>
-            </div>
             <div className="form-row">
               <input type="email" name="user_email" placeholder="Email Address" required />
               <input type="text" name="user_phone" placeholder="Mobile Number" required />
@@ -138,7 +138,7 @@ const Footer = () => {
       <div className="footer">
         <div className="footer-content">
           <div className="footer-section logo-section">
-            <div className="logo">A<span>&</span>S</div>
+            {/* <div className="logo"><img src={image1} alt="logo" style={{}}/></div> */}
             <span className="studio-name">Riya Artist Studio</span>
             <p>Inspired by emotion and driven by passion, we craft unique pieces that bring beauty, meaning, and life into your space.</p>
 

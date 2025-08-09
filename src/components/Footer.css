@@ -6,7 +6,7 @@
   padding: 20px 0;
 }
 
-.footer::after {
+/* .footer::after {
   content: "A&S";
   position: absolute;
   right: 40px;
@@ -16,7 +16,7 @@
   font-weight: bold;
   font-family: serif;
   pointer-events: none;
-}
+} */
 
 .footer-content {
   display: flex;

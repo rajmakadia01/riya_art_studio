@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import './Header.css';
+import image1 from '../assets/logo.svg'
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -8,8 +9,9 @@ const Header = () => {
     return (
         <header className="main-header">
             <div className="logo-section">
-                <div className="logo">A&S</div>
-                <span>Riya Artist Studio</span>
+                <div className="logo">
+                    <img src={image1} alt='logo' style={{height:'50px'}}/>
+                </div>
             </div>
 
             <nav className="desktop-nav nav-links">
