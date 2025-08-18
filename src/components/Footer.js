@@ -176,7 +176,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>Copyright © 2025 All rights reserved to <Link to="/">Riya Artist Studio</Link></p>
+          <p>Copyright © 2025 All rights reserved to <Link to="/">Riya Art Studio</Link></p>
         </div>
       </div>
 
