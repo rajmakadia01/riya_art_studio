@@ -87,7 +87,7 @@ const Footer = () => {
           </h2>
           <p>
             We'd love to hear from you! Whether you have a question about a painting, want to request a custom piece, or just want to say hello — feel free to reach out.
-            Riya Artist Studio is always here to bring your creative vision to life.
+            Riya Art Studio is always here to bring your creative vision to life.
           </p>
 
           <h4>Contact Details</h4>
@@ -139,7 +139,7 @@ const Footer = () => {
         <div className="footer-content">
           <div className="footer-section logo-section">
             {/* <div className="logo"><img src={image1} alt="logo" style={{}}/></div> */}
-            <span className="studio-name">Riya Artist Studio</span>
+            <span className="studio-name">Riya Art Studio</span>
             <p>Inspired by emotion and driven by passion, we craft unique pieces that bring beauty, meaning, and life into your space.</p>
 
             <div className="social-icons">
