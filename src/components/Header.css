@@ -12,6 +12,14 @@ header {
     background-color: #fff;
 }
 
+.main-header {
+    display: grid;
+    grid-template-columns: minmax(190px, 1fr) auto minmax(190px, 1fr);
+    align-items: center;
+    min-height: 88px;
+    padding: 10px 32px;
+}
+
 .nav-links {
     display: flex;
     gap: 20px;
@@ -33,14 +41,19 @@ header {
 
 .logo-section {
     display: flex;
-    flex-direction: column;
-    /* align-items: center; */
+    align-items: center;
+    justify-self: start;
 }
 
 .logo {
-    color: #ff6f61;
-    font-size: 36px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    display: block;
+    width: clamp(180px, 15vw, 220px);
+    height: auto;
 }
 
 .logo-section span {
@@ -51,6 +64,7 @@ header {
 .contact-section {
     display: flex;
     align-items: center;
+    justify-self: end;
     gap: 10px;
 }
 
@@ -553,6 +567,12 @@ header {
     }
 
     .main-header {
-        position: relative;
+        grid-template-columns: 1fr auto;
+        min-height: 72px;
+        padding: 8px 20px;
+    }
+
+    .logo img {
+        width: clamp(145px, 45vw, 180px);
     }
 }

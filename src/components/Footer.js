@@ -1,5 +1,5 @@
 import './Footer.css';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import React, { useRef, useState } from 'react';
 import Select from 'react-select';
 import { Link } from 'react-router-dom';
@@ -48,34 +48,32 @@ const Footer = () => {
   const formRef = useRef();
   const [selectedCategory, setSelectedCategory] = useState(categoryOptions[0]);
   const [showPopup, setShowPopup] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitError('');
 
-    const hiddenInput = document.createElement('input');
-    hiddenInput.type = 'hidden';
-    hiddenInput.name = 'category';
-    hiddenInput.value = selectedCategory.value;
-    formRef.current.appendChild(hiddenInput);
-
-    emailjs
-      .sendForm(
+    try {
+      await emailjs.sendForm(
         'service_fwfg1kv',
         'template_aar7k61',
         formRef.current,
-        'wfI68dQPFPb3z_-of'
-      )
-      .then(
-        () => {
-          setShowPopup(true);
-          formRef.current.reset();
-          setSelectedCategory(categoryOptions[0]);
-        },
-        (error) => {
-          alert('Failed to send form. Please try again.');
-          console.error(error);
-        }
+        { publicKey: 'wfI68dQPFPb3z_-of' }
       );
+
+      setShowPopup(true);
+      formRef.current.reset();
+      setSelectedCategory(categoryOptions[0]);
+    } catch (error) {
+      const message = error?.text || error?.message || 'Unable to send your message right now.';
+      setSubmitError(message);
+      console.error('EmailJS form submission failed:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -110,6 +108,7 @@ const Footer = () => {
         <div className="contact-form">
           <h4>Fill The Form</h4>
           <form ref={formRef} onSubmit={handleSubmit}>
+            <input type="hidden" name="category" value={selectedCategory.value} />
             <div className="form-row">
               <input type="text" name="user_name" placeholder="Full Name" required />
              
@@ -130,7 +129,12 @@ const Footer = () => {
             <div className="form-row full">
               <textarea name="message" placeholder="Message" required></textarea>
             </div>
-            <button type="submit">Submit Form</button>
+            {submitError && (
+              <p className="form-error" role="alert">{submitError}</p>
+            )}
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Sending...' : 'Submit Form'}
+            </button>
           </form>
         </div>
       </div>
