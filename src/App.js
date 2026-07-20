@@ -12,13 +12,23 @@ import FabricPaiting from './components/FabricPaiting';
 import CanvasPaiting from './components/CanvasPaiting';
 import Gallery from './components/Gallery';
 import Admin from './components/Admin';
+import GlobalLoader from './components/GlobalLoader';
+import { useEffect, useState } from 'react';
 
 function AppContent() {
   const { pathname } = useLocation();
   const isAdminRoute = pathname === '/admin' || pathname.startsWith('/admin/');
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(true);
+    const timer = window.setTimeout(() => setIsLoading(false), 850);
+    return () => window.clearTimeout(timer);
+  }, [pathname]);
 
   return (
       <>
+          {isLoading && <GlobalLoader />}
           {!isAdminRoute && <Header />}
           <Routes>
               <Route path="/" element={<Home />} />
