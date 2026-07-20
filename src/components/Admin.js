@@ -70,7 +70,7 @@ export default function Admin() {
     form.append('photo', photo); form.append('category', category); form.append('title', title);
     try {
       await apiRequest('/api/admin/gallery', { method: 'POST', headers: { Authorization: `Bearer ${token}` }, body: form });
-      setTitle(''); setPhoto(null); event.target.reset(); setMessage('Photo gallery mein add ho gayi.'); await loadItems();
+      setTitle(''); setPhoto(null); event.target.reset(); setMessage('Photo added to the gallery successfully.'); await loadItems();
     } catch (error) { setMessage(error.message); }
     finally { setLoading(false); }
   };
@@ -89,7 +89,7 @@ export default function Admin() {
         method: 'PUT', headers: { Authorization: `Bearer ${token}` }, body: form,
       });
       setItems((current) => current.map((item) => item.id === updated.id ? updated : item));
-      setEditingId(''); setEditPhoto(null); setMessage('Photo update ho gayi.');
+      setEditingId(''); setEditPhoto(null); setMessage('Photo updated successfully.');
     } catch (error) { setMessage(error.message); }
     finally { setLoading(false); }
   };
@@ -101,24 +101,24 @@ export default function Admin() {
     try {
       await apiRequest(`/api/admin/gallery/${id}`, { method: 'DELETE', headers: { Authorization: `Bearer ${token}` } });
       setItems((current) => current.filter((item) => item.id !== id));
-      setPendingDelete(null); setMessage('Photo delete ho gayi.');
+      setPendingDelete(null); setMessage('Photo deleted successfully.');
     } catch (error) { setMessage(error.message); }
     finally { setLoading(false); }
   };
 
   const logout = () => { sessionStorage.removeItem('adminToken'); setToken(''); setItems([]); };
 
-  if (!token) return <main className="admin-page"><form className="admin-card admin-login" onSubmit={login}><h1>Admin Login</h1><label>Email<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required /></label><label>Password<input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required /></label>{message && <p className="admin-message error">{message}</p>}<button disabled={loading}>{loading ? 'Login ho raha hai...' : 'Login'}</button></form></main>;
+  if (!token) return <main className="admin-page"><form className="admin-card admin-login" onSubmit={login}><h1>Admin Login</h1><label>Email<input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required /></label><label>Password<input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required /></label>{message && <p className="admin-message error">{message}</p>}<button disabled={loading}>{loading ? 'Logging in...' : 'Login'}</button></form></main>;
 
   return <main className="admin-page">
-    <div className="admin-heading"><div><h1>Gallery Admin</h1><p>Sabhi uploaded photos ko add, edit ya delete karein.</p></div><button className="secondary" onClick={logout}>Logout</button></div>
+    <div className="admin-heading"><div><h1>Gallery Admin</h1><p>Add, edit or delete all uploaded photos.</p></div><button className="secondary" onClick={logout}>Logout</button></div>
     <form className="admin-card upload-form" onSubmit={addPhoto}>
       <label>Photo title (optional)<input value={title} onChange={(e) => setTitle(e.target.value)} maxLength="100" /></label>
       <label>Category<Select className="admin-category-select" options={categoryOptions} value={categoryOptions.find((item) => item.value === category)} onChange={(item) => setCategory(item.value)} styles={selectStyles} isSearchable={false} /></label>
       <label>Photo (JPG, PNG, WEBP — max 8 MB)<input type="file" accept="image/jpeg,image/png,image/webp" onChange={(e) => setPhoto(e.target.files[0])} required /></label>
       {message && <p className="admin-message">{message}</p>}<button disabled={loading}>{loading ? 'Please wait...' : 'Add to Gallery'}</button>
     </form>
-    <section className="admin-list"><h2>All Uploaded Photos ({items.length})</h2>{items.length === 0 && <p>Abhi koi photo upload nahi hui hai.</p>}
+    <section className="admin-list"><h2>All Uploaded Photos ({items.length})</h2>{items.length === 0 && <p>No photos have been uploaded yet.</p>}
       <div className="admin-grid">{items.map((item) => <article key={item.id}>
         <img src={`${API_URL}${item.imageUrl}`} alt={item.title || item.category} />
         {editingId === item.id ? <form className="edit-photo-form" onSubmit={saveEdit}>
@@ -133,7 +133,7 @@ export default function Admin() {
       <div className="delete-modal" role="dialog" aria-modal="true" aria-labelledby="delete-title">
         <div className="delete-icon" aria-hidden="true">!</div>
         <h2 id="delete-title">Delete this photo?</h2>
-        <p>Yeh photo gallery se permanently delete ho jayegi. Is action ko undo nahi kiya ja sakta.</p>
+        <p>This photo will be permanently removed from the gallery. This action cannot be undone.</p>
         <div className="delete-preview"><img src={`${API_URL}${pendingDelete.imageUrl}`} alt={pendingDelete.title || pendingDelete.category} /><div><strong>{pendingDelete.title || 'Untitled'}</strong><small>{pendingDelete.category}</small></div></div>
         <div className="modal-actions"><button className="modal-cancel" onClick={() => setPendingDelete(null)} disabled={loading}>Cancel</button><button className="modal-delete" onClick={deletePhoto} disabled={loading}>{loading ? 'Deleting...' : 'Delete Photo'}</button></div>
       </div>
