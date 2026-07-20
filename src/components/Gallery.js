@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Select from 'react-select';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './Gallery.css';
+import { API_URL, apiRequest } from '../api';
 
 
 // IMPORTS HERE
@@ -343,6 +344,16 @@ const allImages = [
 const Gallery = () => {
   const [visibleCount, setVisibleCount] = useState(9);
   const [selectedCategory, setSelectedCategory] = useState('Texture Art');
+  const [uploadedImages, setUploadedImages] = useState([]);
+
+  useEffect(() => {
+    apiRequest('/api/gallery')
+      .then((items) => setUploadedImages(items.map((item) => ({
+        ...item,
+        src: `${API_URL}${item.imageUrl}`,
+      }))))
+      .catch(() => setUploadedImages([]));
+  }, []);
 
   const handleLoadMore = () => {
     setVisibleCount((prev) => prev + 9);
@@ -356,7 +367,12 @@ const Gallery = () => {
   const filteredImages =
     selectedCategory === ''
       ? []
-      : allImages.filter((img) => img.category === selectedCategory);
+      : [...uploadedImages, ...allImages].filter((img) => img.category === selectedCategory);
+
+  const displayedLatestImages = [
+    ...uploadedImages.slice(0, 6).map((item) => item.src),
+    ...latestImages,
+  ].slice(0, 6);
 
   const groupPattern = [3, 2, 3];
   const groupedImages = [];
@@ -427,7 +443,7 @@ Transforming spaces into experiences through the language of art.
           pagination={{ clickable: true }}
           className="custom-swiper"
         >
-          {latestImages.map((img, index) => (
+          {displayedLatestImages.map((img, index) => (
             <SwiperSlide key={index}>
               <img src={img} alt={`Art ${index + 1}`} className="work-image" />
             </SwiperSlide>
@@ -464,7 +480,7 @@ Transforming spaces into experiences through the language of art.
                     <img
                       key={imgIndex}
                       src={img.src}
-                      alt={`work-${rowIndex}-${imgIndex}`}
+                      alt={img.title || `work-${rowIndex}-${imgIndex}`}
                       className="gallery-image"
                     />
                   ))}

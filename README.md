@@ -1,5 +1,17 @@
 # Getting Started with Create React App
 
+## Gallery admin and backend
+
+1. Copy `.env.example` to `.env` and change `ADMIN_PASSWORD` and `JWT_SECRET`.
+2. Run `npm install` once.
+3. Run `npm start` to start the React website and API together.
+4. Open `http://localhost:3000/admin` to login and upload a photo.
+
+For local development, the fallback login is `admin@riyaartstudio.com` / `Admin@123`.
+Do not use the fallback credentials in production. Uploaded files are stored in
+`server/uploads`, while their category and metadata are stored in
+`server/data/gallery.json`.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

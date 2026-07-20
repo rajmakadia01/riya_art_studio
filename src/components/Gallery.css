@@ -59,6 +59,9 @@
   padding: 60px 20px;
   margin: 0 auto;
   text-align: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .header-row {
@@ -108,15 +111,24 @@
 }
 
 .gallery-row {
-  display: flex;
+  display: grid;
   gap: 25px;
-  justify-content: center;
+  width: 100%;
+  min-width: 0;
+}
+
+.gallery-row-3 {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.32fr) minmax(0, 1fr);
+}
+
+.gallery-row-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 /* === Fixed Sizes for 3-Image Rows === */
 .gallery-row-3 .gallery-image:nth-child(1),
 .gallery-row-3 .gallery-image:nth-child(3) {
-  width: 490px !important;
+  width: 100% !important;
   height: 475px;
   object-fit: cover;
   border-radius: 12px;
@@ -124,7 +136,7 @@
 }
 
 .gallery-row-3 .gallery-image:nth-child(2) {
-  width: 645px;
+  width: 100%;
   height: 475px;
   object-fit: cover;
   border-radius: 12px;
@@ -133,7 +145,7 @@
 
 /* === Sizes for 2-Image Rows === */
 .gallery-row-2 .gallery-image {
-  width: calc((100% - 25px) / 2);
+  width: 100%;
   height: 475px;
   object-fit: cover;
   border-radius: 12px;
@@ -185,8 +197,7 @@
   }
 
   .gallery-row {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 
   .custom-swiper {

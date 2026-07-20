@@ -1,6 +1,6 @@
 import './App.css';
 import Home from './components/Home';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
@@ -11,11 +11,15 @@ import AcrylicPouling from './components/AcrylicPoulingArt';
 import FabricPaiting from './components/FabricPaiting';
 import CanvasPaiting from './components/CanvasPaiting';
 import Gallery from './components/Gallery';
+import Admin from './components/Admin';
 
-function App() {
+function AppContent() {
+  const { pathname } = useLocation();
+  const isAdminRoute = pathname === '/admin' || pathname.startsWith('/admin/');
+
   return (
-      <Router>
-          <Header />
+      <>
+          {!isAdminRoute && <Header />}
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
@@ -26,8 +30,17 @@ function App() {
               <Route path="/art-category/fabricPainting" element={<FabricPaiting />} />
               <Route path="/art-category/canvasPainting" element={<CanvasPaiting />} />
               <Route path="/gallery" element={<Gallery />} />
+              <Route path="/admin" element={<Admin />} />
           </Routes>
-          <Footer />
+          {!isAdminRoute && <Footer />}
+      </>
+  );
+}
+
+function App() {
+  return (
+      <Router>
+          <AppContent />
       </Router>
   );
 }
