@@ -18,6 +18,11 @@ header {
     align-items: center;
     min-height: 88px;
     padding: 10px 32px;
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    border-bottom: 1px solid #f0f0f0;
+    box-shadow: 0 3px 18px rgba(35, 35, 35, 0.05);
 }
 
 .nav-links {
@@ -29,6 +34,10 @@ header {
     text-decoration: none;
     color: #000;
     font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap;
+    padding: 10px 4px;
+    transition: color 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -43,6 +52,7 @@ header {
     display: flex;
     align-items: center;
     justify-self: start;
+    text-decoration: none;
 }
 
 .logo {
@@ -95,6 +105,14 @@ header {
     border-radius: 25px;
     font-size: 16px;
     cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.contact-button:hover {
+    background-color: #ec5e52;
+    transform: translateY(-1px);
 }
 
 .contact-button i {
@@ -493,6 +511,10 @@ header {
     width: 25px;
     height: 20px;
     cursor: pointer;
+    padding: 9px;
+    border: 0;
+    background: transparent;
+    box-sizing: content-box;
 }
 
 .hamburger .bar {
@@ -508,12 +530,25 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #fff;
+    background-color: rgba(20, 20, 20, 0.42);
     z-index: 1000;
     display: flex;
-    flex-direction: column;
-    padding: 20px;
-    animation: slideIn 0.3s ease-in-out forwards;
+    justify-content: flex-end;
+    animation: fadeIn 0.2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.mobile-menu-panel {
+    width: min(86vw, 360px);
+    height: 100%;
+    background: #fff;
+    padding: 20px 22px 28px;
+    box-shadow: -12px 0 35px rgba(0, 0, 0, 0.16);
+    animation: slideIn 0.28s ease-out forwards;
 }
 
 @keyframes slideIn {
@@ -521,14 +556,25 @@ header {
     to { transform: translateX(0); }
 }
 
+.mobile-menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 18px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ececec;
+    color: #222;
+    font-size: 20px;
+    font-weight: 700;
+}
+
 .close-button {
-    align-self: flex-end;
     font-size: 32px;
     background: none;
     border: none;
     color: #000;
     cursor: pointer;
-    margin-bottom: 20px;
+    line-height: 1;
     transition: transform 0.2s;
 }
 
@@ -539,20 +585,54 @@ header {
 .mobile-nav {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
+    gap: 8px;
+    align-items: stretch;
 }
 
 .mobile-nav a {
     font-size: 18px;
     color: #333;
     text-decoration: none;
+    padding: 13px 14px;
+    border-radius: 10px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.mobile-nav > a:hover,
+.mobile-nav > a.active {
+    color: #ff6f61;
+    background-color: #fff1ef;
+}
+
+.mobile-nav a i {
+    width: 25px;
 }
 
 .mobile-buttons {
     display: flex;
     gap: 10px;
     margin-top: 30px;
+}
+
+.mobile-buttons .contact-button {
+    width: 100%;
+    justify-content: center;
+    color: #fff;
+}
+
+@media (max-width: 1050px) and (min-width: 769px) {
+    .main-header {
+        grid-template-columns: minmax(155px, 1fr) auto minmax(155px, 1fr);
+        padding-inline: 20px;
+    }
+
+    .logo img { width: 165px; }
+    .nav-links { gap: 12px; }
+
+    .nav-links a,
+    .contact-button { font-size: 14px; }
+
+    .contact-button { padding: 9px 13px; }
 }
 
 /* Responsive */
@@ -575,4 +655,9 @@ header {
     .logo img {
         width: clamp(145px, 45vw, 180px);
     }
+}
+
+@media (max-width: 380px) {
+    .main-header { padding-inline: 12px; }
+    .logo img { width: 138px; }
 }
